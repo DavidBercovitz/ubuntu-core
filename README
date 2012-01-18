@@ -1,1 +1,7 @@
 Helper scripts to construct an Ubuntu Core based filesystem
+Script invoke examples (sudo privilege required):
+ $ sudo mount <my target media> /mnt
+ $ cd /mnt
+ $ sudo <path to git repo>/ubuntuCoreSetup.sh precise armhf
+ $ cd
+ $ sudo umount /mnt
