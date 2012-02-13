@@ -201,6 +201,8 @@ done
 EOF
 '
 
+chmod a+x bin/serial-console
+
 #
 # Remove root password has it is not known anyway
 # This is recommended to change it at first boot
