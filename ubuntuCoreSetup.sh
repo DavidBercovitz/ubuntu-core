@@ -84,7 +84,7 @@ done
 # Today only oneiric and precise are handled.
 # Hoping Canonical will continue with the precise naming
 # scheme too...
-DISTNUM="12.04"
+DISTNUM="12.04.1"
 
 # if an extracted filesystem is already there, wipe it out!
 if [ -d "usr" ] && [ -d "etc" ]; then
@@ -116,10 +116,8 @@ hash grep 2>&- || { echo >&2 "Script requires grep utility but it's not installe
 
 if [ "$DISTRIB" = "oneiric" ]; then
   DISTNUM="11.10"
-  core_image="ubuntu-core-$DISTNUM-core-$ARMARCH.tar.gz"
-else
-  core_image="$DISTRIB-core-$ARMARCH.tar.gz"
 fi
+core_image="ubuntu-core-$DISTNUM-core-$ARMARCH.tar.gz"
 
 core_path="http://cdimage.ubuntu.com/ubuntu-core/releases/$DISTNUM/release"
 
