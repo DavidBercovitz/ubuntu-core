@@ -84,7 +84,7 @@ done
 # Today only oneiric and precise are handled.
 # Hoping Canonical will continue with the precise naming
 # scheme too...
-DISTNUM="12.04.1"
+DISTNUM="12.04.2"
 
 # if an extracted filesystem is already there, wipe it out!
 if [ -d "usr" ] && [ -d "etc" ]; then
