@@ -36,7 +36,7 @@ else
   ARMARCH="$2"
 fi
 
-distros=([1]=oneiric [2]=precise)
+distros=([1]=oneiric [2]=precise [3]=quantal)
 archis=([1]=armel [2]=armhf)
 
 # Validate parameters
@@ -116,6 +116,8 @@ hash grep 2>&- || { echo >&2 "Script requires grep utility but it's not installe
 
 if [ "$DISTRIB" = "oneiric" ]; then
   DISTNUM="11.10"
+elif [ "$DISTRIB" = "quantal" ]; then
+	DISTNUM="12.10"
 fi
 core_image="ubuntu-core-$DISTNUM-core-$ARMARCH.tar.gz"
 
