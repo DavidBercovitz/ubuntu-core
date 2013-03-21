@@ -150,7 +150,7 @@ echo "Setting up the Ubuntu Core Image for TI network..."
 ##
 ## Create a serial console on the UART.
 ##
-echo "Setting up erial console on UART..."
+echo "Setting up serial console on UART..."
 sh -c "cat > etc/init/serial-auto-detect-console.conf << EOF 
 # serial-auto-detect-console - starts getty on serial console
 #
