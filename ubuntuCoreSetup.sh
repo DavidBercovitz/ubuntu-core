@@ -36,7 +36,7 @@ else
   ARMARCH="$2"
 fi
 
-distros=([1]=oneiric [2]=precise)
+distros=([1]=oneiric [2]=precise [3]=quantal)
 archis=([1]=armel [2]=armhf)
 
 # Validate parameters
@@ -84,7 +84,7 @@ done
 # Today only oneiric and precise are handled.
 # Hoping Canonical will continue with the precise naming
 # scheme too...
-DISTNUM="12.04.1"
+DISTNUM="12.04.2"
 
 # if an extracted filesystem is already there, wipe it out!
 if [ -d "usr" ] && [ -d "etc" ]; then
@@ -116,6 +116,8 @@ hash grep 2>&- || { echo >&2 "Script requires grep utility but it's not installe
 
 if [ "$DISTRIB" = "oneiric" ]; then
   DISTNUM="11.10"
+elif [ "$DISTRIB" = "quantal" ]; then
+	DISTNUM="12.10"
 fi
 core_image="ubuntu-core-$DISTNUM-core-$ARMARCH.tar.gz"
 
@@ -150,7 +152,7 @@ echo "Setting up the Ubuntu Core Image for TI network..."
 ##
 ## Create a serial console on the UART.
 ##
-echo "Setting up erial console on UART..."
+echo "Setting up serial console on UART..."
 sh -c "cat > etc/init/serial-auto-detect-console.conf << EOF 
 # serial-auto-detect-console - starts getty on serial console
 #
